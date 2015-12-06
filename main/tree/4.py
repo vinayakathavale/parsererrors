@@ -13,7 +13,7 @@ f.close()
 
 CC=0
 Ccount=0
-
+gaga=0
 startsentence=0
 for i in range(len(a)):
 	if a[i] == '\n':
@@ -27,7 +27,6 @@ for i in range(len(a)):
 		assert(start >= 0)
 
 		tempdepth=depth	
-		lala=0
 		list1.append(a[start+startsentence])
 
 		while tempdepth > 0:
@@ -49,7 +48,6 @@ for i in range(len(a)):
 		assert(start >= 0)
 
 		tempdepth=depth	
-		lala=0
 		list2.append(b[start+startsentence])
 		
 		while tempdepth > 0:
@@ -70,8 +68,16 @@ for i in range(len(a)):
 
 
 		startsentence=i+1
+	else:
+		if "ROOT" in b[i] and b[i].split()[3]!="punc":
+#if a[i]!=b[i]:
+#				if b[i].split()[7]=="ROOT":
+				
+			Ccount+=1
+			gaga+=1
+		
 
-
+print gaga
 print Ccount
 print CC
 print Ccount/float(CC)
