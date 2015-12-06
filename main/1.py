@@ -1,8 +1,12 @@
-f=open("intest_3_12")
+inp=raw_input("correct filename")
+test=raw_input("parser o/p filename")
+	
+	
+f=open(inp)
 infile=f.readlines()
 f.close()
 
-f=open("outmalt_3_12")
+f=open(test)
 outfile=f.readlines()
 f.close()
 count=0
